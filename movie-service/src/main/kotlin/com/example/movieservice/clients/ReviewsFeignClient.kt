@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 
-@FeignClient(value = "reviews-service", url = "http://localhost:8761")
+@FeignClient("reviews-service")
 interface ReviewsFeignClient{
 
     @RequestMapping(method = [RequestMethod.GET], value = ["/reviews/{movieId}"])
